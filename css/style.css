@@ -1,0 +1,678 @@
+
+@charset "utf-8";
+.signin_up {
+    margin: 0 auto;
+    width: 90%;
+    height: 400px;
+    display: table;
+    padding: 30px;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 30px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 30px;
+    /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+    border-radius: 30px;
+    /*background-image: url(../images/screen_bg_3.jpg);*/
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    background: #dfdfdf;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#subscribeModal {
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    background-color: cornsilk;
+    display: none;
+}
+
+#subscribeModal form {
+    width: 180px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#subscribeModal form input {
+    display: block;
+    height: 2em;
+    border: 2px solid #666;
+    border-radius: 6px;
+    margin-bottom: 5px
+}
+
+html,
+body {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+    display: table;
+}
+
+.main {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: table;
+    background: #fff;
+}
+
+.main .top {
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: table;
+    margin-bottom: 1px;
+    background-image: url(../images/skillzlogo);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 100%;
+}
+
+  
+  .top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      margin: 0 3em 3em 0;
+      border-radius: 50%;
+      padding: .25em;
+      width: 80px;
+      height: 80px;
+    
+    
+    &.show {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    &.hide {
+      visibility: hidden;
+      opacity: 0;
+    }
+  
+      svg {
+          fill: #000;
+          width: 24px;
+          height: 12px;
+      }
+  
+      &:hover {
+          background-color: #000000;
+  
+          svg {
+              fill: #000000;
+          }
+      }
+  }
+  
+  // Text meant only for screen readers.
+  .screen-reader-text {
+      position: absolute;
+      clip-path: inset(50%);
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      word-wrap: normal !important;
+      clip: rect(1px, 1px, 1px, 1px);
+  
+      &:focus {
+          display: block;
+          top: 5px;
+          left: 5px;
+          z-index: 100000; // Above WP toolbar
+          clip-path: none;
+          background-color: #eee;
+          padding: 15px 23px 14px;
+          width: auto;
+          height: auto;
+          text-decoration: none;
+          line-height: normal;
+          color: #444;
+          font-size: 1em;
+          clip: auto !important;
+      }
+  }
+
+.searchfield { display: block; width: 100%; text-align: center; margin-bottom: 1px; }
+
+ /* .searchfield form {
+  display: inline-block;
+  padding: 0;
+  margin: 1px;
+  padding: 5px;
+  border-radius: 3px;
+  margin: 5px;
+  margin-left: 180px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+} */
+
+.searchfield form .myinput {
+   width: 70%;
+  height: 40px; 
+  padding: 0 10px 0 10px; 
+   background-color: #fff;
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
+  color: #aeaeae;
+  font-weight:normal;
+  font-size: 1.0em;
+ } 
+.searchfield form .myinput:focus {
+  color: #858585; 
+}
+@media screen and (max-width: 600px) {
+    .searchfield, input[type=text] {
+      width: 100%;
+      margin-top: 0;
+    }
+  } 
+
+.flatbtn {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    color: #f3faef;
+    text-decoration: none;
+    background-color: #6bb642;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 12px 22px 12px 22px;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0 rgba(15, 15, 15, 0.3);
+    -moz-box-shadow: 0 1px 0 rgba(15, 15, 15, 0.3);
+    box-shadow: 0 1px 0 rgba(15, 15, 15, 0.3);
+  }
+  .flatbtn:hover {
+    color: #fff;
+    background-color: #73c437;
+  }
+  .flatbtn:active {
+    -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow:inset 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow:inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  .autocomplete-suggestions { border: 1px solid #999; background: #fff; cursor: default; overflow: auto; }
+  .autocomplete-suggestion { padding: 10px 5px; font-size: 1.2em; white-space: nowrap; overflow: hidden; }
+  .autocomplete-selected { background: #f0f0f0; }
+  .autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
+/* #myInput{
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    width: 70%;
+    height: 30px;
+} */
+.main .top ._logo_ {
+    margin: 0 auto;
+    width: 90%;
+    height: 100px;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    background-image: url(../images/skillzlogo.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    margin-top: 5px;
+	
+}
+
+.main .top [class*='_txt'] {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main .top ._txt1_ {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.main .top ._txt1_ span {
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.main .top ._txt1_ span:nth-of-type(1) {
+    width: 35%;
+    font-size: 250%;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.main .top ._txt1_ span:nth-of-type(2) {
+    width: 65%;
+}
+
+.main .top ._txt2_ {
+    color: #d80c17;
+    font-size: 110%;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.main .top ._txt3_ {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+    font-weight: 300;
+    color: #d80c17;
+    text-transform: uppercase;
+    letter-spacing: -0.9px;
+}
+
+.main .top ._txt4_ {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 190%;
+    font-weight: bolder;
+    color: #222;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    display: table;
+}
+
+.main .top ._txt4_ span {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    display: table;
+    position: relative;
+    text-align: center;
+}
+
+.main .top ._txt4_ span:nth-of-type(1) {
+    text-align: center;
+}
+
+.main .top ._txt4_ span:nth-of-type(1):after {
+    content: '';
+    margin: 0 auto;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    display: table;
+    border-right: none;
+    border-bottom: 1px solid #67b4c8;
+    left: 35%;
+    padding-top: 10px;
+}
+
+.main .top ._txt5_ {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    font-weight: bolder;
+    color: #d80c17;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+}
+
+.main .top ._txt6_ {
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    font-weight: bolder;
+    color: #dfdfdf;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    background: #02b0ef;
+    padding: 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 45px;
+}
+
+.main .top ._txt6_:hover {
+    color: #fff;
+    background: #0075a0;
+}
+
+.main .top ._vid_ {
+    margin: 0 auto;
+    width: 90%;
+    height: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    font-weight: bolder;
+    color: #dfdfdf;
+    letter-spacing: 1px;
+    position: relative;
+    display: table;
+    background: #111;
+    -moz-box-shadow: 1px 5px 25px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 5px 25px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 5px 25px 1px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.main .top ._vid_ video {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    font-weight: bolder;
+    color: #dfdfdf;
+    position: relative;
+    display: table;
+}
+
+.main .top ._vid_:hover {
+    -moz-box-shadow: 3px 23px 65px 1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 3px 23px 65px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 23px 65px 1px rgba(0, 0, 0, 0.5);
+}
+
+.main .bottom {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: table;
+    background: #fff;
+    padding-top: 30px;
+}
+
+.main .bottom .div3 {
+    margin: 0 auto;
+    width: 85%;
+    height: 160px;
+    position: relative;
+    display: table;
+    background: #fff;
+    padding-top: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.main .bottom ._logo_ {
+    margin: 0 auto;
+    width: 90%;
+    height: 190px;
+    position: relative;
+    display: block;
+    background: #363435;
+    background-image: url(../images/eko-market-area-logo-1.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    margin-top: 0px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.main .bottom ._img1_ {
+    margin: 0 auto;
+    width: 90%;
+    height: 100px;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    background: #FFF;
+    background-image: url(../images/eko-txt-1.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    margin-top: 5px;
+}
+
+.main .bottom .div3 ._links_ {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.main .bottom .div3 ._links_ a {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #bbb;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-align: center
+}
+
+.main .bottom .div3:hover ._links_ a {
+    color: #7c7c7c;
+}
+
+.footer {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: table;
+    padding: 15px;
+    color: #fff;
+    margin-top: 30px;
+    background: #00b1ef;
+    text-align: center;
+    padding-top: 20px;
+}
+/* .slideshow-container{
+    margin-bottom: 100px;
+    /* margin-top: 150px; 
+} */
+
+
+
+/*
+LARGER MOBILE DEVICES
+This is for mobile devices with a bit larger screens.
+*/
+
+@media only screen and (min-width: 360px) {
+   .searchfield form .myinput{
+       width: 70%;
+       height: 40px;
+       /* margin: 0 10px; */
+       
+   }
+    .main {
+        width: 300px;
+    }
+    .main .top {
+        height: 800px;
+        margin-bottom: 30px;
+        background-size: 105%;
+    }
+    .main .top ._logo_ {
+        max-width: 230px;
+        height: 120px;
+    }
+    .searchfield{
+        width: 100%;
+       
+    }
+}
+
+@media all and (min-width: 760px) {
+    .main {
+        width: 700px;
+    }
+    .main .top {
+        height: 800px;
+        margin-bottom: 30px;
+        background-size: 105%;
+    }
+    .main .top ._logo_ {
+        max-width: 250px;
+        height: 133px;
+    }
+    .main .top ._txt1_ {
+        max-width: 350px;
+    }
+    .main .top ._txt4_ {
+        max-width: 750px;
+    }
+    .main .top ._txt4_ span {
+        display: inline-table;
+        max-width: 250px;
+        text-align: left;
+    }
+    .main .top ._txt4_ span:nth-of-type(1) {
+        text-align: right;
+        border-right: 1px solid #67b4c8;
+        border-bottom: none;
+    }
+    .main .top ._txt4_ span:nth-of-type(1):after {
+        border-bottom: none;
+    }
+    .main .top ._txt6_ {
+        max-width: 250px;
+    }
+    .main .top ._vid_ {
+        max-width: 500px;
+        height: 300px;
+    }
+    .main .bottom .div3 {
+        width: 32%;
+        height: 200px;
+        float: left;
+        margin-left: 0.5%;
+        margin-bottom: 30px;
+    }
+    .footer {
+        width: 700px;
+    }
+}
+
+
+/*
+TABLET & SMALLER LAPTOPS
+The average viewing window and preferred media query for those is 768px.
+But I think that some more breathing space is good:)
+*/
+
+@media only screen and (min-width: 920px) {
+    .main {
+        width: 900px;
+    }
+    .footer {
+        width: 900px;
+    }
+}
+
+
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+
+@media only screen and (min-width: 1030px) {}
+
+
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+
+@media all and (min-width: 1162px) {}
+
+@media only screen and (min-width: 1240px) {}
+
+
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution.
+*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}
+
+
+/*
+iPHONE 5 MEDIA QUERY
+iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
+*/
+
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+
+/*
+PRINT STYLESHEET
+*/
+
+@media print {}

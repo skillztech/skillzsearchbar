@@ -1,0 +1,283 @@
+<DOCTYPE! html>
+    <html>
+
+    <head>
+        <title>Eko-eMarkets</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta http-equiv="x-UA-compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+       
+        <!-- <link rel="stylesheet" type="text/css" media="all" href="style.css"> -->
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+        <script type="text/javascript" src="js/search-autocomplete.js"></script>
+
+
+    </head>
+
+    <body>
+        
+
+
+        <div class="main">
+            <div class="top">
+                <div class="_logo_"></div>
+               
+             
+                <div class="searchfield">
+                    <form><input type="search" name="search" class="myinput" id="autocomplete"
+                            placeholder="search"></form>
+                </div>
+                <!-- <button type="button" name="button" onclick="myFunction()">search</button> -->
+                <!-- <div id="searchfield">
+                    <form><input type="text" name="search" class="myinput" id="autocomplete"></form>
+                </div>
+
+                <div id="outputbox">
+                    <p id="outputcontent"></p>
+                </div> -->
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="banna Ads/jj.jpg" width="100%" height="auto">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="banna Ads/late.jpg" width="100%" height="auto">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="banna Ads/black.jpg" width="100%" height="auto">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="banna Ads/gt.jpg" width="100%" height="auto">
+                    </div>
+                    
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+                
+            </div>
+            <!-- end of top-->
+            <!--back t0 top button-->
+
+            <div class="bottom" id="mybottom">
+                <div class="div3">
+                    <div class="_links_">
+                        <a href="http://www.aboutskillz/home/" target="_blank"
+                            title="Go to Rainbow FM website">www.aboutskillz.com</a>
+                    </div>
+                </div>
+                <!-- end of div3-->
+                <div class="div3">
+                    <div class="_links_">
+                        <a href="joseph.html">www.joseph.com</a>
+                    </div>
+                </div>
+                <!-- end of div3-->
+                <div class="div3">
+                    <div class="_links_">
+                        <a href="Skillz.html.html" target="_blank" title="Go to skillz website"><span
+                                class="_icon_1"></span><span class="_link_txt_">www.skillz.com</span></a>
+                    </div>
+                </div>
+               
+
+            <!-- end of main -->
+
+            <a class="top-link hide" href="" id="js-top">
+                <span class="screeen-reader-text"><img src="images/skillzlogo.jpg" width="50%" height="50%"></span> </a>
+            <style>
+                div#message {
+                    margin-top: 20vh;
+                    position: absolute;
+                    z-index: 2;
+                    width: 100%;
+                    display: none;
+                }
+
+                div#message div {
+                    background-color: beige;
+                    width: 60%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                }
+
+                div#message div div.header {
+                    border: 0;
+                    display: grid;
+                    grid-template-columns: 1fr 20px;
+                }
+
+                div#message div div {
+                    border: 0;
+                }
+
+                /*div#message div div.header button {
+                float: right;
+            }
+            div#message div div.header h2 {
+                float: left;
+            }*/
+            </style>
+
+            <!---slider javascript-->
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    slides[slideIndex - 1].style.display = "block";
+                    setTimeout(showSlides, 5000);
+
+                }
+            </script>
+
+
+            <!---back to top button Js-->
+            <script>
+                // Set a variable for our button element.
+                const scrollToTopButton = document.getElementById('js-top');
+                // Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
+                const scrollFunc = () => {
+                    // Get the current scroll value
+                    let y = window.scrollY;
+
+                    // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
+                    if (y > 0) {
+                        scrollToTopButton.className = "top-link show";
+                    } else {
+                        scrollToTopButton.className = "top-link hide";
+                    }
+                };
+                window.addEventListener("scroll", scrollFunc);
+
+                const scrollToTop = () => {
+                    // Let's set a variable for the number of pixels we are from the top of the document.
+                    const c = document.documentElement.scrollTop || document.body.scrollTop;
+
+                    // If that number is greater than 0, we'll scroll back to 0, or the top of the document.
+                    if (c > 0) {
+                        window.requestAnimationFrame(scrollToTop);
+                        // Increase the '10' value to get a smoother/slower scroll!
+                        window.scrollTo(0, c - c / 10);
+                    }
+                };
+                // When the button is clicked, run our ScrolltoTop function above!
+                scrollToTopButton.onclick = function (e) {
+                    e.preventDefault();
+                    scrollToTop();
+                }
+            </script>
+            <!-- <script>
+                function myFunction() {
+                    var input, filter, div, div, a, i, txtValue;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    div = document.getElementById("mySearch");
+                    div = div.getElementsByTagName("div");
+                    for (i = 0; i < div.length; i++) {
+                        a = div[i].getElementsByTagName("a")[0];
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            div[i].style.display = "";
+                        } else {
+                            div[i].style.display = "none";
+                        }
+                    }
+                }
+            </script> -->
+
+            <script type="text/javascript">
+                const subscriptionForm = document.getElementById("subscriptionForm");
+                const showSignup = () => {
+                    const subscModal = document.getElementById("subscribeModal");
+                    subscModal.style.display = "block";
+                }
+
+                const closeSubs = () => {
+                    const subscModal = document.getElementById("subscribeModal");
+                    subscModal.style.display = "none";
+                }
+
+                const closeMsg = () => {
+                    let message = document.getElementById("message");
+                    message.style.display = "none";
+                }
+
+                const openMsg = () => {
+                    let message = document.getElementById("message");
+                    message.style.display = "block";
+                }
+
+                const setMessage = (message) => {
+                    let text = document.getElementById("messageText");
+                    text.innerHTML = message;
+                }
+
+                const getFormDataAsJSON = form => {
+                    let obj = {};
+                    for (let i = 0; i < subscriptionForm.elements.length - 1; i++) {
+                        obj[subscriptionForm.elements[i].name] = subscriptionForm.elements[i].value
+                    }
+                    return obj;
+                }
+
+                const clearFields = () => {
+                    for (let i = 0; i < subscriptionForm.elements.length - 1; i++) {
+                        subscriptionForm.elements[i].value = '';
+                    }
+                }
+
+
+                const submitData = async () => {
+                    let message = document.getElementById("message");
+                    let formData = getFormDataAsJSON(subscriptionForm);
+                    let error = document.getElementById("error");
+                    // fetch("https://hidden-ridge-91534.herokuapp.com/business/register", 
+                    //     {method:"post", headers: {"Content-Type":"application/json"}, body:JSON.stringify(formData)}
+                    // ).then(response => {
+                    //     return response.json();
+                    // }).then(response => {
+                    //     setMessage(response.message);
+                    //     closeSubs();
+                    //     openMsg();
+                    // });
+                    let response;
+                    try {
+                        response = await fetch("https://hidden-ridge-91534.herokuapp.com/business/register",
+                            { method: "post", headers: { "Content-Type": "application/json" }, body: JSON.stringify(formData) }
+                        );
+                    } catch {
+                        error.innerHTML = "Error: Check connection";
+                    }
+
+                    response = await response.json();
+                    if (response.error) {
+                        error.innerHTML = response.error;
+                    }
+                    if (response.message) {
+                        setMessage(response.message);
+                        closeSubs();
+                        clearFields();
+                        openMsg();
+                    }
+
+                }
+
+            </script>
+
+    </body>
+
+    </html>
